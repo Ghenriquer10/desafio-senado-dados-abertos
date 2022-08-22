@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const Container = styled.header`
     background-color: #005B9E;
     width: 100%;
-    height: 70px;
+    height: 67px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 8px;
 
     @media (min-width: 320px) and (max-width: 480px) {
         padding: 5px;
@@ -21,10 +21,14 @@ export const Container = styled.header`
             background: transparent;
             border: none;
             color: #fff;
-            font-size: 1.7em;
+            font-size: 1.8em;
             font-family: inherit;
             height: 50px;
             width: 120px;
+
+            p{
+                font-weight: 100;
+            }
 
             @media (min-width: 320px) and (max-width: 480px) {
                 width: 50px;
@@ -47,6 +51,11 @@ export const Container = styled.header`
         left: 0;
         right: 0;
         text-align: center;
+
+        img{
+            height: 26px;
+            width: 200px;
+        }
     }
 
     .acessibility{

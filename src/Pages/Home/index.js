@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import * as C from './style';
 import {FiSearch} from 'react-icons/fi'
+import Card from '../../components/Card';
 
 export default function Home(){
 
@@ -30,6 +31,7 @@ export default function Home(){
                     <p>Senadores</p>
                 </C.PageAbout>
             </C.SearchField>
+            <Card/>
         </C.Container>
     )
 }

@@ -6,11 +6,12 @@ export default createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         outline: 0;
+        font-family: 'Source Sans Pro', sans-serif;
     }
 
     body{
+        -webkit-font-smoothing: antialiased !important;
         font-size: 14px;
-        font-family: sans-serif;
     }
 
     button{

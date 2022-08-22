@@ -7,7 +7,7 @@ export const Container = styled.main`
 export const SearchField = styled.div`
     height: 130px;
     background-color: #0095DA;
-    padding: 10px 20px;
+    padding: 10px 15px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -23,9 +23,12 @@ export const SearchAbout = styled.div`
     justify-content: space-between;
 
     p{
-        font-size: 2.5em;
+        font-size: 3.4em;
+        font-weight: 100;
+        height: 100%;
+        width: 100%;
+        
     }
-
         .input-field{
             display: flex;
             align-items: center;
@@ -91,4 +94,8 @@ export const PageAbout = styled.div`
     line-height: 1.5;
     font-weight: 400;
     font-size: 1.3em;
+
+    p{
+        font-weight: bold;
+    }
 `;
