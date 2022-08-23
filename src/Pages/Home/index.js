@@ -1,11 +1,23 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import * as C from './style';
 import {FiSearch} from 'react-icons/fi'
 import Card from '../../components/Card';
+import apiBase from '../../services/api';
 
 export default function Home(){
 
     const [inputSearch, setInputSearch] = useState(false)
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        async function loadData(){
+            const response = await apiBase.get()
+            setData(response.data.ListaParlamentarEmExercicio.Parlamentares.Parlamentar)
+            console.log(response.data.ListaParlamentarEmExercicio.Parlamentares.Parlamentar)
+        }
+
+        loadData()
+    }, [])
 
     function setInputVisible(){
         setInputSearch(prev => !prev)
@@ -32,40 +44,19 @@ export default function Home(){
                 </C.PageAbout>
             </C.SearchField>
             <C.SenatorsContainer>
-                <div className='has--senators'>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
+                <div className='has--senators'>                
+                {data ? (
+                   Object.values(data).map((item) => {
+                            return(
+                                <Card 
+                                    key={item.IdentificacaoParlamentar.CodigoParlamentar}
+                                    item={item}
+                                />
+                            )
+                    })
+
+                ): (<h1>Nada aqui</h1>)}
+
                 </div>
             </C.SenatorsContainer>
         </C.Container>

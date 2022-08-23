@@ -34,6 +34,7 @@ export const Container = styled.article`
             justify-content: space-around;
                 p:first-child{
                     font-size: 1.5em;
+                    text-align: center;
                 }
 
                 button{

@@ -1,15 +1,14 @@
 import React from 'react';
 import * as C from './style';
-import politico from '../../assets/logo/Presidente_Bolsonaro.png'
 
-export default function Card(){
+export default function Card({item}){
     return(
-        <C.Container style={{backgroundImage: `url(${politico})`}}>
+        <C.Container style={{backgroundImage: `url(${item.IdentificacaoParlamentar.UrlFotoParlamentar})`}}>
             <div className='senator-field'>
                 <div className='senator-about'>
-                    <p className='senator-name'>Jair Messias Bolsonaro</p>
-                    <p>Sp - São Paulo</p>
-                    <p>PL - Partido Liberal</p>
+                    <p className='senator-name'>{item.IdentificacaoParlamentar.NomeParlamentar}</p>
+                    <p>{item.IdentificacaoParlamentar.UfParlamentar}</p>
+                    <p>{item.IdentificacaoParlamentar.SiglaPartidoParlamentar}</p>
                     <button>
                         <p>Detalhes</p>
                     </button>
