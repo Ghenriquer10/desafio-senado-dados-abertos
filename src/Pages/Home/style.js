@@ -99,3 +99,18 @@ export const PageAbout = styled.div`
         font-weight: bold;
     }
 `;
+
+export const SenatorsContainer = styled.section`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding: 50px;
+
+    .has--senators{
+        display: grid;
+        grid-gap: 60px;
+        grid-template-columns: repeat(4, auto);  
+    }
+`;
