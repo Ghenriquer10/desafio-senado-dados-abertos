@@ -42,7 +42,7 @@ export default function SenatorDetail(){
             </div>
 
             {loading ? (
-                <h1>Carregando</h1>
+                <h1 className='loading'>Carregando...</h1>
             ): (
                 <C.SenatorAbout>
                     <div className='senator-about'>

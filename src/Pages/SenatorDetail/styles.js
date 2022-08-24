@@ -34,6 +34,10 @@ export const Container = styled.div`
         background-color: #0095DA;
     }
 
+    .loading{
+        color: ${props => props.theme.colors.text};
+    }
+
     p{
         font-size: 2em;
         width: 100%;
@@ -42,7 +46,7 @@ export const Container = styled.div`
 
 export const SenatorAbout = styled.section`
     margin: 20px 0 20px 0;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 90%;
     background-color: #0095DA;
     color: #fff;
@@ -113,7 +117,8 @@ export const SenatorAbout = styled.section`
                 font-size: 3.4em;
 
                 @media (min-width: 320px) and (max-width: 780px) {
-                    font-size: 2.5em;
+                    text-align: center;
+                    font-size: 2.3em;
                     margin-bottom: 20px;
                 }
             }
