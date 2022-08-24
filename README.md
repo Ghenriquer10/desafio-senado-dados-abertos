@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Desafio Senado - Dados abertos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Desafio proposto pelo Senado para a criação de um projeto front-end que mostre na tela do usuárioo os senadores em exercicio atualmente, além de dados como partido, estado em que exerce e comissões em que faz parte. 
 
-## Available Scripts
+### Funcionalidades adicionadas: 
+- Acessibilidade ao usuário com tema escuro ou claro <br/>
+- Busca por sigla do partido ou estado em que o senador exerce <br/>
+- Página com detalhes do senador e comissões em que faz parte <br/>
 
-In the project directory, you can run:
+### Tecnologias utilizadas
+- React.js <br/>
+- React-icons <br/>
+- Axios <br/>
+- styled-components <br/>
 
-### `npm start`
+Demo: https://desafio-senado-dados-abertos.netlify.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Telas
+Tela web senadores: 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Tela web 1](https://user-images.githubusercontent.com/61561169/186512060-a1d8beef-1ef2-4c48-a829-7c155d51753c.png)
 
-### `npm test`
+Tela web buscando senador:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Tela web 2 search](https://user-images.githubusercontent.com/61561169/186512135-b1451810-aa44-4e8e-b71a-8eb68424d96b.png)
 
-### `npm run build`
+Tela Web detalhes do senador:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Tela web 3 detalhes](https://user-images.githubusercontent.com/61561169/186512348-25620c55-0779-4239-9c03-732d5799252e.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Tela web comissões:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Tela web 4 comissoes](https://user-images.githubusercontent.com/61561169/186512430-a1db7e61-d498-4dbe-b62c-9436aa94ab6a.png)
 
-### `npm run eject`
+Tela mobile senadores: 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![tela mobile 1](https://user-images.githubusercontent.com/61561169/186512593-c4cce304-3968-4e80-b7b4-43c4142e73e3.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Tela mobile buscando senador:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![tela mobile 2 search](https://user-images.githubusercontent.com/61561169/186512731-327fa66c-23f8-43e6-850f-013439822a98.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Tela mobile detalhes do senador:
 
-## Learn More
+![tela mobile 3 detalhe](https://user-images.githubusercontent.com/61561169/186512801-5c4542d5-6430-4577-9dfb-a54f1f42b6ac.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Tela mobile comissões:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![tela mobile 4 comissoes](https://user-images.githubusercontent.com/61561169/186512874-2567f3b5-f7b2-42a7-8a6a-7c27fd4584b6.png)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
