@@ -9,44 +9,44 @@ export const Container = styled.div`
     flex-direction: column;
     p{
         font-size: 2em;
-        margin-bottom: 20px;
         width: 100%;
     }
-    `;
+`;
 
 export const SenatorAbout = styled.section`
+    margin: 20px 0 20px 0;
     border-radius: 10px;
-    padding: 30px;
-    border: 2px solid #0095DA;
     width: 90%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-direction: row;
-    width: 90%;
+    background-color: #0095DA;
+    color: #fff;
     
     .senator-about{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         flex-direction: row;
         width: 80%;
         
         .senator-photo{
             width: 50%;
             img{
-                height: 400px;
-                width: 350px;
+                height: 450px;
+                width: 400px;
                 border: 20px solid #0095DA;
             }
         }
         
         .senator-data{
             width: 50%;
+            height: 110mm;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-start;
+            justify-content: space-around;
             flex-direction: column;
+
+            .senator-name{
+                font-size: 3.4em;
+            }
         }
     }
 `;

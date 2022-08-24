@@ -47,21 +47,25 @@ export default function SenatorDetail(){
                             <img src={senator.IdentificacaoParlamentar.UrlFotoParlamentar} alt={'Foto do senador pesquisado.'}/>
                         </div>
                         <div className='senator-data'>
-                            <p>Nome: {senator.IdentificacaoParlamentar.NomeParlamentar}</p>
-                            <p>Estado: {senator.IdentificacaoParlamentar.UfParlamentar} - {handleState(senator.IdentificacaoParlamentar.UfParlamentar)} </p>
-                            <p>Partido: {senator.IdentificacaoParlamentar.SiglaPartidoParlamentar}</p>
-                            <p>Nascimento: {senator.DadosBasicosParlamentar.DataNascimento}</p>
+                            <div>
+                                <p className='senator-name'>{senator.IdentificacaoParlamentar.NomeParlamentar} - {senator.IdentificacaoParlamentar.SiglaPartidoParlamentar}</p>
+                            </div>
+                            <div>
+                                <p>Estado: {senator.IdentificacaoParlamentar.UfParlamentar} - {handleState(senator.IdentificacaoParlamentar.UfParlamentar)} </p>
+                                <p>Partido: {senator.IdentificacaoParlamentar.SiglaPartidoParlamentar}</p>
+                                <p>Nascimento: {senator.DadosBasicosParlamentar.DataNascimento.replace(/-/gi, "/")}</p>
+                            </div>
                         </div>
                     </div>
                 </C.SenatorAbout>
             )}
-
+            <p>Comissões</p>
             <C.Commission>
             {commission ? (
                    Object.values(commission).map((item, index) => {
                         return(
                             <SenatorCommission
-                                key={item.IdentificacaoComissao.CodigoComissao}
+                                key={index}
                                 item={item}
                             />
                         )

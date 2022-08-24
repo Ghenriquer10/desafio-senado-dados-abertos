@@ -8,14 +8,18 @@ export default function SenatorCommission({item}){
                 <p>Código da comissão: {item.IdentificacaoComissao.CodigoComissao}</p>
             </div>
             <div className='commission'>
-                <p>Comissão: {item.IdentificacaoComissao.NomeComissao}</p>
+                <p>Nome: {item.IdentificacaoComissao.NomeComissao}</p>
             </div>
             <div className='commission--date'>
                 <div>
-                    <p>Inicio da comissão: {item.DataInicio}</p>
+                    <p>Inicio da comissão: {item.DataInicio.replace(/-/gi, "/")}</p>
                 </div>
                 <div>
-                    <p>Fim da comissão: {item.DataFim}</p>
+                    {item.DataFim === undefined ? (
+                        <p>Fim da comissão: Em aberto</p>
+                    ): (
+                        <p>Fim da comissão: {item.DataFim.replace(/-/gi, "/")}</p>
+                    )}
                 </div>
             </div>
         </C.Container>
