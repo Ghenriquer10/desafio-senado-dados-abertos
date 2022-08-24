@@ -37,16 +37,20 @@ export const Container = styled.article`
                     text-align: center;
                 }
 
-                button{
+                .button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     border: none;
                     height: 29px;
                     width: 100%;
                     color: #fff;
                     background-color: #0095DA;
                     font-size: 0.7em;
+                    font-weight: bold;
                 }
 
-                button:hover{
+                .button:hover{
                     transition: all 1s;
                     background-color: #fff;
                     color: #000000;

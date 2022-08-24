@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { contextData } from '../../contexts/contextData';
 import * as C from './style';
 
@@ -13,9 +14,9 @@ export default function Card({item}){
                     <p className='senator-name'>{item.IdentificacaoParlamentar.NomeParlamentar}</p>
                     <p>{item.IdentificacaoParlamentar.UfParlamentar} - {handleState(item.IdentificacaoParlamentar.UfParlamentar)}</p>
                     <p>{item.IdentificacaoParlamentar.SiglaPartidoParlamentar}</p>
-                    <button>
+                    <Link className='button' to={`/senator/${item.IdentificacaoParlamentar.CodigoParlamentar}`}>
                         <p>Detalhes</p>
-                    </button>
+                    </Link>
                 </div>
             </div>
         </C.Container>

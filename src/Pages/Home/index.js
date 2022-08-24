@@ -55,7 +55,7 @@ export default function Home(){
                             )
                     })
 
-                ): (<h1>Nada aqui</h1>)}
+                ): (<h1>Não foi possível carregar dados dos senadores</h1>)}
 
                 </div>
             </C.SenatorsContainer>
