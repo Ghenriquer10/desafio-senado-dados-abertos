@@ -54,7 +54,7 @@ export const SearchAbout = styled.div`
     
             input::placeholder{
                 color: #CCCCCC;
-                font-size: 1.3em;
+                font-size: 1.0em;
             }
     
             svg.web-search{
@@ -83,9 +83,16 @@ export const SearchAbout = styled.div`
 
 export const MobileInput = styled.div`
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
         input{
             width: 100%;
             height: 35px;
+            border: none;
+            padding: 20px;
+            font-size: 1.4em;
         }
 `;
 

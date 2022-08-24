@@ -3,10 +3,12 @@ import Header from '../components/Header';
 import Home from '../Pages/Home';
 import SenatorDetail from '../Pages/SenatorDetail';
 
-const HandleRoutes = () => {
+const HandleRoutes = ({toggleTheme}) => {
     return(
         <BrowserRouter>
-            <Header/>
+            <Header 
+                toggleTheme={toggleTheme}
+            />
             <Routes>
                 <Route path='/' element={<Home/>}/>
                 <Route path='senator/:id' element={<SenatorDetail/>}/>

@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext} from "react";
 
 export const contextData = createContext({})
 
@@ -38,6 +38,8 @@ function DataProvider({children}){
              
         }
     }
+
+    
 
     return(
         <contextData.Provider value={{handleState}}>

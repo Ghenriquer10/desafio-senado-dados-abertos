@@ -75,46 +75,13 @@ export const Container = styled.header`
 
         @media (min-width: 320px) and (max-width: 480px) {
         }
-
-        .languages{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            border-right: 1px solid #fff;
-            padding: 0 10px;
-            gap: 5px;
-
-            @media (min-width: 320px) and (max-width: 480px) {
-                
-                svg{
-                    height: 20px;
-                    width: 20px;
-                }
-
-                select{
-                    display: none;
-                }
-            }
-
-            
-            select{
-                height: 30px;
-                background: transparent;
-                color: #fff;
-                border: none;
-            }
-
-            option{
-                color: #000;
-            }
-        }
         
         .themes{
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: row;
+            margin-right: 16px;
 
             @media (min-width: 320px) and (max-width: 480px) {
                 svg{

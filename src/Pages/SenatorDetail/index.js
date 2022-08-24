@@ -27,7 +27,7 @@ export default function SenatorDetail(){
     useEffect(() => {
         async function loadCommissions(){
             const response = await commissionApi.get(`/${id}/comissoes.json`)
-            console.log(response.data.MembroComissaoParlamentar.Parlamentar.MembroComissoes.Comissao)
+            console.log(response.data.MembroComissaoParlamentar)
             setCommission(response.data.MembroComissaoParlamentar.Parlamentar.MembroComissoes.Comissao)
         }
 
@@ -47,7 +47,11 @@ export default function SenatorDetail(){
                 <C.SenatorAbout>
                     <div className='senator-about'>
                         <div className='senator-photo'>
-                            <img src={senator.IdentificacaoParlamentar.UrlFotoParlamentar} alt={'Foto do senador pesquisado.'}/>
+                            {senator.IdentificacaoParlamentar.UrlFotoParlamentar === new Error() ? (
+                                <h1 className='no-photo'>Sem foto do senador</h1>
+                                ): (
+                                <img src={senator.IdentificacaoParlamentar.UrlFotoParlamentar} alt={'Foto do senador pesquisado.'}/>
+                            )}
                         </div>
                         <div className='senator-data'>
                             <div>

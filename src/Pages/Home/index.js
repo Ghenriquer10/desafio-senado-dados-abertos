@@ -6,7 +6,8 @@ import apiBase from '../../services/api';
 
 export default function Home(){
 
-    const [inputSearch, setInputSearch] = useState(false)
+    const [inputSearch, setInputSearch] = useState('')
+    const [inputVisible, setInputVisible] = useState(false)
     const [data, setData] = useState([])
 
     useEffect(() => {
@@ -19,9 +20,17 @@ export default function Home(){
         loadData()
     }, [])
 
-    function setInputVisible(){
-        setInputSearch(prev => !prev)
+    function hadnleSearch(){
+        console.log(inputSearch)
     }
+
+    function HandleInputVisible(){
+        setInputVisible(prev => !prev)
+    }
+
+    const senatorStateFilter = 
+        data.filter((data) => data.IdentificacaoParlamentar.UfParlamentar.includes(inputSearch.toUpperCase()) 
+        || data.IdentificacaoParlamentar.SiglaPartidoParlamentar.includes(inputSearch.toUpperCase()) )
 
     return(
         <C.Container>
@@ -29,14 +38,22 @@ export default function Home(){
                 <C.SearchAbout>
                     <p>Dados Abertos</p>
                     <div className='input-field'>
-                        <input placeholder='Buscar'/>
-                        <FiSearch size={20} className={'web-search'}/>
-                        <FiSearch size={20} className={'mobile-search'} onClick={setInputVisible}/>
+                        <input 
+                            placeholder='Buscar por sigla do estado ou partido'
+                            value={inputSearch}
+                            onChange={e => setInputSearch(e.target.value)}
+                        />
+                        <FiSearch size={20} className={'web-search'} onClick={hadnleSearch}/>
+                        <FiSearch size={20} className={'mobile-search'} onClick={HandleInputVisible}/>
                     </div>
                 </C.SearchAbout>
-                {inputSearch && (
+                {inputVisible && (
                     <C.MobileInput>
-                        <input placeholder='Buscar'/>
+                        <input 
+                            placeholder='Buscar por sigla do estado ou partido'
+                            value={inputSearch}
+                            onChange={e => setInputSearch(e.target.value)}
+                        />
                     </C.MobileInput>
                 )}
                 <C.PageAbout>
@@ -46,7 +63,7 @@ export default function Home(){
             <C.SenatorsContainer>
                 <div className='has--senators'>                
                 {data ? (
-                   Object.values(data).map((item) => {
+                   Object.values(senatorStateFilter).map((item) => {
                             return(
                                 <Card 
                                     key={item.IdentificacaoParlamentar.CodigoParlamentar}

@@ -46,7 +46,7 @@ export const SenatorAbout = styled.section`
     width: 90%;
     background-color: #0095DA;
     color: #fff;
-    @media (min-width: 320px) and (max-width: 780px) {
+    @media (min-width: 320px) and (max-width: 480px) {
         width: 100%;
     }
     
@@ -64,6 +64,14 @@ export const SenatorAbout = styled.section`
         
         .senator-photo{
             width: 50%;
+
+            .no-photo{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 200px;
+            }
+
             @media (min-width: 320px) and (max-width: 780px) {
                 width: 100%;
                 display: flex;
@@ -75,7 +83,7 @@ export const SenatorAbout = styled.section`
                 width: 400px;
                 border: 20px solid #0095DA;
                 
-                @media (min-width: 320px) and (max-width: 780px) {
+                @media (min-width: 320px) and (max-width: 1280px) {
                     width: 100%;
                     height: 320px;
                     width: 320px;
@@ -104,7 +112,7 @@ export const SenatorAbout = styled.section`
             .senator-name{
                 font-size: 3.4em;
 
-                @media (min-width: 320px) and (max-width: 480px) {
+                @media (min-width: 320px) and (max-width: 780px) {
                     font-size: 2.5em;
                     margin-bottom: 20px;
                 }
