@@ -27,5 +27,6 @@ export const Container = styled.article`
         flex-direction: row;
         display: flex;
         gap: 20px;
+        font-size: 0.7em;
     }
 `;

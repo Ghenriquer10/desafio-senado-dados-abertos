@@ -12,13 +12,13 @@ export default function SenatorCommission({item}){
             </div>
             <div className='commission--date'>
                 <div>
-                    <p>Inicio da comissão: {item.DataInicio.replace(/-/gi, "/")}</p>
+                    <p>Inicio: {item.DataInicio.replace(/-/gi, "/")}</p>
                 </div>
                 <div>
                     {item.DataFim === undefined ? (
-                        <p>Fim da comissão: Em aberto</p>
+                        <p>Fim: Em aberto</p>
                     ): (
-                        <p>Fim da comissão: {item.DataFim.replace(/-/gi, "/")}</p>
+                        <p>Fim: {item.DataFim.replace(/-/gi, "/")}</p>
                     )}
                 </div>
             </div>
