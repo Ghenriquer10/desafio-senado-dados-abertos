@@ -4,11 +4,13 @@ import {useParams} from 'react-router-dom';
 import senatorApi from '../../services/senatorApi';
 import { contextData } from '../../contexts/contextData';
 import SenatorCommission from '../../components/SenatorCommission';
+import commissionApi from '../../services/commissionApi';
 
 export default function SenatorDetail(){
 
     const { id } = useParams()
     const [senator, setSenator]=useState({})
+    const [commission, setCommission]=useState({})
     const [loading, setLoading]=useState(true) 
 
     const {handleState} = useContext(contextData)
@@ -16,7 +18,6 @@ export default function SenatorDetail(){
     useEffect(() => {
         async function loadSenator(){
             const response = await senatorApi.get(`/${id}.json`)
-            console.log(response.data.DetalheParlamentar.Parlamentar)
             setSenator(response.data.DetalheParlamentar.Parlamentar)
             setLoading(false)
         }
@@ -24,8 +25,14 @@ export default function SenatorDetail(){
     } ,[id])
 
     useEffect(() => {
-        
-    }, [])
+        async function loadCommissions(){
+            const response = await commissionApi.get(`/${id}/comissoes.json`)
+            console.log(response.data.MembroComissaoParlamentar.Parlamentar.MembroComissoes.Comissao)
+            setCommission(response.data.MembroComissaoParlamentar.Parlamentar.MembroComissoes.Comissao)
+        }
+
+        loadCommissions()
+    }, [id])
 
     return(
         <C.Container>
@@ -50,9 +57,17 @@ export default function SenatorDetail(){
             )}
 
             <C.Commission>
-                <SenatorCommission
+            {commission ? (
+                   Object.values(commission).map((item, index) => {
+                        return(
+                            <SenatorCommission
+                                key={item.IdentificacaoComissao.CodigoComissao}
+                                item={item}
+                            />
+                        )
+                    })
 
-                />
+            ): (<h1>Não foi possível carregar as comissões dos senadores</h1>)}
             </C.Commission>
         </C.Container>
     )

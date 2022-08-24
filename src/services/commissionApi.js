@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const apiBase = axios.create({
-    baseURL: 'http://legis.senado.leg.br/dadosabertos/senador/lista/atual.json'
+const commissionApi = axios.create({
+    baseURL: 'https://legis.senado.leg.br/dadosabertos/senador'
 })
 
-export default apiBase;
+export default commissionApi;

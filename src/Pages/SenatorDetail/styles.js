@@ -14,7 +14,7 @@ export const Container = styled.div`
     }
     `;
 
-export const SenatorAbout=styled.section`
+export const SenatorAbout = styled.section`
     border-radius: 10px;
     padding: 30px;
     border: 2px solid #0095DA;
@@ -52,5 +52,10 @@ export const SenatorAbout=styled.section`
 `;
 
 export const Commission = styled.article`
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
 `;
