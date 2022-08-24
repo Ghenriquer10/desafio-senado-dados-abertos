@@ -27,7 +27,10 @@ export const SearchAbout = styled.div`
         font-weight: 100;
         height: 100%;
         width: 100%;
-        
+
+        @media (min-width: 320px) and (max-width: 659px) {
+            font-size: 2.0em;
+        }
     }
         .input-field{
             display: flex;
@@ -112,5 +115,18 @@ export const SenatorsContainer = styled.section`
         display: grid;
         grid-gap: 60px;
         grid-template-columns: repeat(4, auto);  
+        
+        @media (min-width: 320px) and (max-width: 659px) {
+            grid-template-columns: repeat(1, auto);  
+        }
+
+        @media (min-width: 660px) and (max-width: 1020px) {
+            grid-template-columns: repeat(2, auto);  
+        }
+        @media (min-width: 1021px) and (max-width: 1400px)  {
+            grid-template-columns: repeat(3, auto);  
+        }
     }
+
+
 `;

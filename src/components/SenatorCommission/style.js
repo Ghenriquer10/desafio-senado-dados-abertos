@@ -11,6 +11,11 @@ export const Container = styled.article`
     gap: 10px;
     background-color: #337AB7;
     color: #fff;
+
+    @media (min-width: 320px) and (max-width: 480px) {
+            width: 100%;
+    }
+
     p{
         font-size: 1.5em;
         display: flex;

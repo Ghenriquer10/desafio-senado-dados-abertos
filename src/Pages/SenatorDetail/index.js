@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import * as C from './styles'
-import {useParams} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import senatorApi from '../../services/senatorApi';
 import { contextData } from '../../contexts/contextData';
 import SenatorCommission from '../../components/SenatorCommission';
@@ -36,7 +36,10 @@ export default function SenatorDetail(){
 
     return(
         <C.Container>
-            <p>Senador</p>
+            <div className='title'>
+                <p>Senador</p>
+                <Link className='button-back' to={'/'}>Voltar</Link>
+            </div>
 
             {loading ? (
                 <h1>Carregando</h1>

@@ -32,6 +32,7 @@ export const Container = styled.header`
 
             @media (min-width: 320px) and (max-width: 480px) {
                 width: 50px;
+
                 p{
                     display: none;
                 }                    
@@ -55,7 +56,14 @@ export const Container = styled.header`
         img{
             height: 26px;
             width: 200px;
+
+            @media (min-width: 320px) and (max-width: 480px) {
+                height: 15px;
+                width: 100px;              
+            }
         }
+
+
     }
 
     .acessibility{
