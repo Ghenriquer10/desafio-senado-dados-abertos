@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const api = process.env.REACT_APP_BASE_URL
+
 const apiBase = axios.create({
-    baseURL: 'http://legis.senado.leg.br/dadosabertos/senador/lista/atual.json'
+    baseURL: api
 })
 
 export default apiBase;
