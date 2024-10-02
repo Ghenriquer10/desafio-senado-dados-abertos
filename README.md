@@ -1,6 +1,6 @@
 # Desafio Senado - Dados abertos
 
-### Desafio proposto pelo Senado para a criação de um projeto front-end que mostre na tela do usuárioo os senadores em exercicio atualmente, além de dados como partido, estado em que exerce e comissões em que faz parte. 
+### Desafio proposto pelo Senado para a criação de um projeto front-end que mostre na tela do usuário os senadores em exercicio atualmente, além de dados como partido, estado em que exerce e comissões em que faz parte. 
 
 ### Funcionalidades adicionadas: 
 - Acessibilidade ao usuário com tema escuro ou claro <br/>
